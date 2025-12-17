@@ -1,0 +1,169 @@
+/* =================================================================
+   FORM STYLES
+   ================================================================= */
+
+/* A container for the form to give it consistent spacing and width */
+.form-container {
+  max-width: 600px; /* Or a width you prefer */
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border-color-light, #e5e7eb);
+  border-radius: var(--border-radius-md, 4px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+}
+
+/* Styles for a group containing a label and an input */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Style for the form labels */
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+/* Shared styles for all form inputs, textareas, and selects */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--surface);
+  border: 1px solid var(--border-color-light, #e5e7eb);
+  border-radius: var(--border-radius-sm, 4px);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* --- STATES --- */
+
+.form-control:focus {
+  outline: none; /* Remove default outline */
+}
+
+/* Beautiful focus state for accessibility */
+.form-control:focus-visible {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.15);
+}
+
+/* Style for inputs with validation errors */
+.form-control.is-invalid {
+  border-color: var(--danger, #ef4444);
+}
+
+.form-control.is-invalid:focus-visible {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* Style for the validation error message text */
+.form-error-text {
+  color: var(--danger, #ef4444);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Container for form actions (buttons) */
+.form-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end; /* Aligns button to the right */
+  gap: 1rem;
+}
+
+/* src/pages/Admin/AdminUserManagementPage.css */
+
+/* ... (existing styles) ... */
+
+/* Modal Specific Styles */
+.user-details-modal-content {
+  padding: 10px;
+  /* Make sure the modal itself has enough width. 
+     You might need to adjust the Modal component's default width
+     or add a specific class to this modal instance.
+     For now, let's assume the modal container itself can expand. */
+}
+
+.user-details-modal-content h3 {
+  font-size: 1.1rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.user-details-modal-content .info-grid {
+  display: grid;
+  /* Adjust grid-template-columns: 
+     - Use fr units for flexible columns.
+     - You can make the labels fixed width and values flexible, or both flexible.
+     - 1fr 1fr means two equal columns.
+     - Try something like 150px 1fr to give labels a minimum width.
+  */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 15px 20px; /* Row gap and column gap */
+}
+
+.user-details-modal-content .info-row, /* For General Info section */
+.user-details-modal-content .info-grid > div {
+  /* For Verification Data direct divs */
+  display: flex;
+  flex-direction: column; /* Stacks label on top of value */
+  /* Add padding or margin if content is too close to border */
+}
+
+.user-details-modal-content .info-label {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.user-details-modal-content .info-value-wrapper span,
+.user-details-modal-content .info-grid > div > span {
+  /* Targeting the direct span for verification data */
+  font-size: 0.95rem;
+  color: var(--text-main);
+  /* --- KEY FIXES FOR LONG CONTENT --- */
+  word-break: break-word; /* Breaks long words that don't fit */
+  overflow-wrap: break-word; /* Ensures text wraps within its container */
+  white-space: normal; /* Ensures text wraps, overriding any nowrap */
+}
+
+.user-details-modal-content .info-value-wrapper p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  /* Apply the same fixes for paragraph elements if they can hold long data */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Make the specific 'Full Address' item span two columns if needed */
+.user-details-modal-content
+  .info-grid
+  > div:last-child[style*="grid-column: 1 / span 2"] {
+  /* No specific styles needed here if text wrapping is fixed, but useful for layout */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actions .button {
+  min-width: 100px;
+}

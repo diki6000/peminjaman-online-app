@@ -1,0 +1,43 @@
+services:
+  # 1. THE DATABASE SERVICE
+  database:
+    image: postgres:17
+    container_name: my_project_db
+    environment:
+      POSTGRES_DB: app_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # 2. THE BACKEND (LARAVEL)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: my_project_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/var/www/html
+    depends_on:
+      - database
+
+  # 3. THE FRONTEND (REACT)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: my_project_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+volumes:
+  db_data:

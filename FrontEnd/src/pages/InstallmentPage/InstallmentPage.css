@@ -1,0 +1,247 @@
+.installment-detail-page {
+  width: 100%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color-light);
+  margin-bottom: 2rem;
+}
+
+.profile-back-link-wrapper {
+  margin-bottom: 0.75rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between arrow and 'Back' text */
+  color: var(--text-secondary); /* Softer color for the link */
+  text-decoration: none; /* No underline by default */
+  font-size: 0.9rem; /* Slightly smaller font for the back link */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--primary); /* Hover effect */
+}
+
+.back-link svg {
+  width: 1rem; /* Adjust size of the arrow icon */
+  height: 1rem;
+  stroke-width: 2; /* Make the stroke thicker if needed */
+}
+
+.heading-1 {
+  font-size: 2.25rem; /* Larger font size for the main title, matching image */
+  font-weight: 700; /* Bolder */
+  color: var(--text-primary);
+  margin: 0; /* Remove default margin */
+  line-height: 1.2;
+}
+
+.body-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem; /* Space below the main title */
+}
+
+.body-text strong {
+  font-weight: 600;
+}
+
+.installment-table-container {
+  background: var(--surface);
+  border: 1px solid var(--border-color-light); /* Use CSS variable */
+  border-radius: var(
+    --border-radius-lg
+  ); /* Use larger border-radius for container */
+  overflow: hidden; /* Ensures content respects border-radius */
+  box-shadow: var(--shadow-sm); /* Add a subtle shadow for depth */
+}
+
+.installment-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes space between borders */
+}
+
+.installment-table th,
+.installment-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--divider-color); /* Lighter border for rows */
+}
+
+.installment-table thead th {
+  background-color: var(--divider-color); /* Lighter background for header */
+  font-size: 0.75rem; /* Slightly smaller for table header */
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* A bit of letter spacing for headers */
+}
+
+.installment-table tbody td {
+  color: var(--text-primary); /* Default text color for body cells */
+  font-size: 0.95rem; /* Slightly smaller for table body text */
+}
+
+.installment-table tbody tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+.month-cell strong {
+  font-weight: 600; /* Ensure the month text is bold */
+  color: var(--text-primary);
+}
+
+.penalty-indicator {
+  font-size: 0.75rem; /* Smaller font for penalty text */
+  color: var(--danger); /* Highlight penalty in red */
+  margin-left: 0.25rem;
+  white-space: nowrap; /* Prevent line break for the (+ penalty) text */
+}
+
+.action-cell {
+  text-align: right; /* Already there, good */
+  display: flex;
+  justify-content: flex-end; /* Align contents to the right */
+  align-items: center; /* Vertically center buttons/text */
+  min-height: 48px; /* Ensure consistent row height for actions */
+}
+
+.upcoming-indicator {
+  font-size: 0.875rem; /* Match the 'small' button font size */
+  color: var(--text-secondary); /* Greyed out text */
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Mimic button padding */
+  display: inline-block; /* Allows padding and consistent spacing */
+}
+
+.payment-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--divider-color); /* Use CSS variable */
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-md); /* Use CSS variable */
+  margin-bottom: 1.5rem;
+}
+.payment-summary span {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.payment-summary strong {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.payment-channels-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.payment-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* For scrollbar space */
+  margin-bottom: 1.5rem;
+}
+
+.payment-channels-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.payment-channels-list::-webkit-scrollbar-track {
+  background: var(--divider-color);
+  border-radius: 10px;
+}
+
+.payment-channels-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* A slightly darker grey */
+  border-radius: 10px;
+}
+
+.payment-channels-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* Even darker on hover */
+}
+
+.channel-details .channel-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.channel-details .channel-info {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color-light); /* Use CSS variable */
+}
+
+.payment-modal-content .loading {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.receipt {
+  padding: 1rem 0; /* Adjust padding as needed */
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.receipt-item span:first-child {
+  color: var(--text-secondary);
+}
+
+.receipt-total {
+  font-weight: 600;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--divider-color);
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+}
+
+.points-earned {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--secondary); /* Use secondary color for points */
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-badge {
+  font-weight: 600;
+  color: b;
+}

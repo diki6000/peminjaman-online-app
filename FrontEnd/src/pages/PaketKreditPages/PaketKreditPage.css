@@ -1,0 +1,133 @@
+.paket-kredit-page {
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.paket-kredit-page-header .heading-2 {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.body-text {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loan-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+}
+
+.loading {
+  color: var(--text-secondary);
+}
+
+.error {
+  color: #ef4444;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  .paket-kredit-page {
+    padding: 1rem;
+  }
+
+  .loan-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .loan-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .paket-kredit-page-header .heading-2 {
+    font-size: 2rem;
+  }
+
+  .active-loan-message {
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .button-large {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loan-card-details li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .paket-kredit-page-header .heading-2 {
+    font-size: 1.75rem;
+  }
+}
+
+.active-loan-banner {
+  background-color: #eff6ff;
+  border: 1px solid #93c5fd;
+  color: #1e40af;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.active-loan-banner p {
+  margin: 0;
+  font-weight: 500;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.paket-kredit-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1.5px solid rgba(191, 189, 189, 0.623);
+}

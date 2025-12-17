@@ -1,0 +1,85 @@
+/* src/components/Admin/AdminSidebar.css */
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #fff;
+  color: var(--white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.admin-sidebar-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.admin-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.admin-user-info {
+  font-size: 0.9rem;
+  color: var(--gray-light);
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.admin-nav li {
+  margin-bottom: 10px;
+}
+
+.admin-nav a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+.admin-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-nav a.active-link {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.admin-logout-button {
+  background-color: var(--danger);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+  color: white;
+}

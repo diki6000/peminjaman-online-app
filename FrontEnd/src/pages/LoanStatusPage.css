@@ -1,0 +1,153 @@
+.status-page-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background);
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.status-badge.pending_review,
+.status-badge.menunggu_pencairan {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+.status-badge.disetujui,
+.status-badge.berjalan,
+.status-badge.active {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+.status-badge.ditolak {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+.status-badge.dibatalkan {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+.status-badge.selesai {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+.status-badge.belum_dibayar {
+  background-color: #fffbeb;
+  color: #b45309;
+  font-size: 0.8rem;
+}
+
+.status-card {
+  border-left-width: 4px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.status-card.pending {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+.status-card.approved {
+  border-color: #10b981;
+  background-color: #f0fdfa;
+}
+.status-card.rejected {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+.status-card.cancelled {
+  border-color: #6b7280;
+  background-color: #f3f4f6;
+}
+.status-card.active {
+  border-color: var(--primary);
+  background-color: #eff6ff;
+}
+.status-card.completed {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+.status-card h3 {
+  margin-top: 0;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.comparison-box {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.comparison-box h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-secondary);
+}
+.comparison-box p {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+.comparison-box.changed {
+  border-color: #facc15;
+  background-color: #fffbeb;
+}
+.comparison-box.approved {
+  border-color: #10b981;
+  background-color: #ecfdf5;
+}
+.admin-notes {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.schedule-container {
+  margin-top: 2rem;
+}
+.payment-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.payment-schedule-table th,
+.payment-schedule-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+.payment-schedule-table th {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+.payment-schedule-table tbody tr:last-child td {
+  border-bottom: none;
+}

@@ -1,0 +1,19 @@
+# Ignore Dependency Folders (Too big!)
+node_modules/
+vendor/
+
+# Ignore Docker Data
+db_data/
+
+# Ignore Environment Secrets (Security)
+.env
+.env.backup
+*.env
+
+# Ignore Mac/Windows System files
+.DS_Store
+Thumbs.db
+
+# Ignore that huge backup zip file (Keep init.sql though)
+*.gz
+*.zip

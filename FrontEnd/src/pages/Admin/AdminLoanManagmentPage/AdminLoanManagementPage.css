@@ -1,0 +1,58 @@
+@import url("../AdminPaketKreditPage/AdminPaketKreditPage.css");
+
+.status-badge {
+  padding: 0.25em 0.7em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: capitalize;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.status-pending_review {
+  background-color: #ffc107;
+  color: #333;
+}
+.status-disetujui {
+  background-color: #007bff;
+}
+.status-ditolak {
+  background-color: #dc3545;
+}
+.status-berjalan {
+  background-color: #28a745;
+}
+.status-selesai {
+  background-color: #17a2b8;
+}
+.status-macet {
+  background-color: #343a40;
+}
+.status-dibatalkan {
+  background-color: #6c757d;
+}
+.status-menunggu_pencairan {
+  background-color: #fd7e14;
+}
+.status-unknown {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.loan-details-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem 1.5rem;
+  align-items: start;
+}
+
+.loan-details-grid span {
+  font-weight: 500;
+  color: #6c757d;
+  text-align: right;
+}
+
+.loan-details-grid p {
+  margin: 0;
+  padding: 0;
+}

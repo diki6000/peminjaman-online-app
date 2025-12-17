@@ -1,0 +1,9 @@
+.admin_layout {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.admin-content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+}

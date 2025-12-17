@@ -1,0 +1,58 @@
+/* src/components/Form/RadioCard.css */
+
+.radio-card {
+  display: block;
+  padding: 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.radio-card:hover {
+  border-color: var(--primary);
+  background-color: #f9fafb;
+}
+
+/* --- THE FIX IS HERE --- */
+/* Style the card itself when it has the .is-checked class */
+.radio-card.is-checked {
+  border-color: var(--primary);
+  background-color: var(--surface);
+  box-shadow: 0 0 0 2px var(--primary); /* A slightly different focus style for selection */
+}
+
+.radio-card-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* When the parent has .is-checked, show the checkmark */
+.radio-card.is-checked .radio-card-content::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio-card-input:focus-visible + .radio-card-content {
+  /* This is just a placeholder, the focus on the label itself is better */
+}
+.radio-card:has(> .radio-card-input:focus-visible) {
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.25);
+}
+
+/* The checkmark is created but hidden by default */
+.radio-card-content::before {
+  content: "✔";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0; /* Hidden */
+  transform: scale(0.5);
+  transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,120 @@
+.login-page-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.login-branding-panel {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 90%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 730px;
+  padding: 4rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.branding-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  margin-bottom: auto;
+}
+
+.branding-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.branding-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.branding-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  max-width: 400px;
+}
+
+.login-form-panel {
+  background-color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 730px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.5s ease-in-out;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.form-header .heading-2 {
+  margin-bottom: 0.5rem;
+}
+
+.form-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.form-link:hover {
+  text-decoration: underline;
+  color: #1e3a8a; /* Darker primary */
+}
+
+.login-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-error-text.login-error {
+  text-align: center;
+  background-color: #fef2f2;
+  border: 1px solid var(--danger);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.form-actions-login {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .login-page-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-branding-panel {
+    display: none; /* Hide the branding panel on smaller screens */
+  }
+
+  .form-header {
+    margin-bottom: 2rem;
+  }
+}
