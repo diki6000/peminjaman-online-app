@@ -18,7 +18,7 @@ Ikuti langkah-langkah berikut ini untuk menjalankan website secara lokal
 ### Software yang diperlukan
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) harus di install dan dijalankan
-- [Git] (https://git-scm.com/install/) harus di install
+- [Git](https://git-scm.com/install/) harus di install
 
 ### 1. Clone Repository
 
@@ -81,6 +81,6 @@ Akses Halaman Admin - Email: admin@example.com - Password: password
 
 Dibuat oleh
 
-- Aditya Dicky Darmawan [GitHub: https://github.com/diki6000]
-- Tatas Buana [GitHub: ]
-- Alrafi Syammanjaya [GitHub: ]
+- Aditya Dicky Darmawan [GitHub](https://github.com/diki6000)
+- Tatas Buana [GitHub]
+- Alrafi Syammanjaya [GitHub]
