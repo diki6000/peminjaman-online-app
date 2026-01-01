@@ -29,14 +29,7 @@ cd peminjaman-online-app
 
 ### 2. Setup Environment Variables
 
-Pastikan BackEnd folder memiliki environment file, jika balum ada
-
-```bash
-# Copy example env file untuk Laravel
-cp BackEnd/.env.example BackEnd/.env
-```
-
-atau copy dari github langsung
+Pastikan BackEnd folder memiliki environment file
 
 ### 3. Run with Docker
 
